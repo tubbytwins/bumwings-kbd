@@ -10,7 +10,7 @@ After researching split keyboards for some time, I went out and bought a gently 
 *  Reliance on the "mod" row (below the lower row) for modifiers;  I could have made this different, but these are harder to reach.
 *  Hard to reach the "number row" (above the upper row); again with the short fingers thing.
 *  Too many keys in the thumb clusters; using the 3 vertically stacked 1U keys is good for some usage, but not great for fast typing (in practice).
-*  Increased key travel (compared to the trusty Typematrix models) with typical Cherry switches means more work to type *and* more impact on fingers, as I find that I need to really bang the things to get the effective feedback that I need to touch-type with any speed.
+*  Increased key travel (compared to the trusty TypeMatrix models) with typical Cherry switches means more work to type *and* more impact on fingers, as I find that I need to really bang the things to get the effective feedback that I need to touch-type with any speed.
 
 Other issues were postural and positional: having the two halves of the Erdogox spaced apart meant that it was possible to put my mouse and mousepad between them; however, I keep finding that I reach outwards (instead of inwards) to find the mouse.  Old habits truly do die hard!
 
@@ -46,11 +46,11 @@ I would say that this design of mine is "from scratch" but obviously I have been
 *   Wren (by Walter Hanley; all variants over time)
 *   Zaphod (by Pete Johanson)
 
-One thing to note: I could find no designs that used the Waveshare RP2040-zero module, which was a bit disappointing to me.  So I used this as a vehicle to prove that it could be used in a keyboard design.  There really is a lot to like about this module: it has more IO pins available than the Xiao Seeed RP2040 module, and only takes up less than one square inch of space.  However, this is not a negative statement regarding the Xiao Seed: it looks very nice and some others have used it successfully in their own keyboard designs.  At some point I would like to do the same, but IMHO the limited IO pins make it impractical for a single-PCB keyboard with a reasonably useful number of rows and columns, such as this keyboard.  The Waveshare RP2040-zero module addresses these issues handily.
+One thing to note: I could find no designs that used the Waveshare RP2040-zero module, which was a bit disappointing to me.  So I used this as a vehicle to prove that it could be used in a keyboard design.  There really is a lot to like about this module: it has more IO pins available than the Xiao Seeed RP2040 module, and only takes up less than one square inch of space.  However, this is not a negative statement regarding the Xiao Seeed family, as they look very nice and some others have used them successfully in their own keyboard designs.  At some point I would like to do the same, but IMHO the limited IO pins make it impractical for a single-PCB keyboard with a reasonably useful number of rows and columns, such as this keyboard.  The Waveshare RP2040-zero module addresses these issues handily.
 
 > FYI - I am not sponsored by Waveshare, nor am I receiving compensation in any way.
 
-Finally, a brief note about the name ("BumWings").  I'm not really going to explain that: I come up with silly names for things all the time, and most of them are based on meats or other food items (which makes this an exception).  The words "bum" and "wings" happened to pop into my head and the combination made sense to me at the time, and so I kept it.  It isn't meant to be pejorative or insulting.  If you don't like it, feel free to adapt the design to your needs, and change the name to your liking.  This is what open source hardware design allows you to do.
+Finally, a brief note about the name ("BumWings").  I'm not really going to give a deep explanation for that: I come up with silly names for things all the time, and most of them are based on meats or other food items (which makes this an exception).  The words "bum" and "wings" happened to pop into my head and the combination made sense to me at the time, and so I kept it.  It isn't meant to be pejorative or insulting.  If you don't like it, feel free to clone the repo, adapt the design to your needs, and change the name to your liking.  This is what open source hardware design allows you to do.
 
 
 ## Links
@@ -68,7 +68,7 @@ Sockets:  Kailh Choc hot-swap (again, you will need 54 of them)
 
 Key caps:  MBK (either plain, or with legends, at your discretion)
 
-Although the Waveshare RP2040-zero module does have castellated pins and can theoretically be mounted directly to SMD pads, this design doesn't support that.  I figured that I wasn't ready to try this yet (since my soldering skills are barely passable at best) and also the narrow central neck of the keyboard didn't need to be made any smaller, since the module's RP2040 chip is mounted on the underside.  So my decisions were made based on simplicity.  The module does have 20 IO pins that are accessible via the edge pins, so it is possible to mount this similar to a Pro Micro or Elite-C (i.e., with pin headers) and you wouldn't even need to worry about the remaining 9 IO pins on the underside. 
+Although the Waveshare RP2040-zero module does have castellated pins and can theoretically be mounted directly to SMD pads, this design doesn't support that.  I figured that I wasn't ready to try this yet (since my soldering skills are barely passable at best) and also the narrow central neck of the keyboard PCB didn't need to be made any smaller, since the module's RP2040 chip is mounted on the underside.  So my decisions were made based on simplicity.  The module does have 20 IO pins that are accessible via the edge pins, so it is possible to mount this similar to a Pro Micro or Elite-C (i.e., with pin headers) and you wouldn't even need to worry about the remaining 9 IO pins on the underside. 
 
 Other resistors/etc:  none
 
@@ -91,7 +91,7 @@ For columns, X is either L for left hand, or R for right hand.
 * Col_Xi2 is the secondary index finger alphas, and the primary thumb key (2U) in the cluster.
 * Col_Xt is the innermost 1.5U keys (which will both be Backspaces for me) plus the remaining 2 thumb keys (1.5U and 1U) in the cluster.
 
-On the board, the key switches are labeled as SW0 through SW55.  Note that SW24 and SW28 do not exist; these would have been on Col_Xt.
+On the board, the key switches are labeled as SW0 through SW55.  Note that SW24 and SW28 do not exist; these would have been on Col\_Xt and Row\_up.
 
 
 ## Layout Recommendations
@@ -101,7 +101,7 @@ I use DVORAK, so I designed this to work well with DVORAK.  You can adapt this t
 Here are some other recommendations:
 
 *  The 1.5U keys on the home row (index finger) should be used as Backspaces.  I use two Backspaces, since I "grew up" using TypeMatrix keyboards and the original ones had two backspaces in the middle.  Don't knock it if you haven't tried it, since using alternate Backspaces for each index finger is a great way to get rid of embarrassing typos, especially if your brain is quicker than your fingers and you don't see the typo until a few more characters have been typed.  If this doesn't work for you, then one of them can become a Delete or Return, or you can remap these to whatever works for you.
-*  The arrow clusters (remote WASD) would work very well as obvious arrow keys for one side, and navigation keys (Home/End/PgUp/PgDn)S for the other side.  You can obviously choose which cluster works better for each use.  The example ZMK configuration shows how these are used for arrows and navigation.
+*  The arrow clusters (remote WASD) would work very well as obvious arrow keys for one side, and navigation keys (Home/End/PgUp/PgDn) for the other side.  You can obviously choose which cluster works better for each use.  The example ZMK configuration shows how these are used for arrows and navigation.
 *  The large 2U thumb keys would work as Space and/or Enter, and optional chording modifiers with home-row keys.  Some examples below:
    *  Thumb + index = Ctrl
    *  Thumb + middle = Shift
@@ -118,11 +118,11 @@ Here are some other recommendations:
 
 ## Case Options
 
-This repo will also contain PCB files for a top plate (with hummingbird art) and a bottom plate (with bigger hummingbird art).  This was heavily inspired by the Corne case.
+This repo also contains PCB files for a top plate (with hummingbird art) and a bottom plate (with bigger hummingbird art).  This was heavily inspired by the Corne case.
 
-I'm also working on a metal top plate design.  This could either be full-size, or made in a split (half) version.  The intended case is a wooden board (or "plinth") that can house the PCB and the metal top plate.  My first concept will likely be based on a bamboo cutting board, but I'll need to do the routing myself to hold the PCB, with an inset for the metal top plate so it sits flush with the upper wood surface.  Also, I'll probably need to cut the board at an angle and re-join it along the centerline with one side flipped, so it has a chunky "V" shape.  This should hold the metal top plate but I need to confirm this.  I don't have all the woodworking tools to make this happen, but I know some people who do...
+I'm also working on a metal top plate design.  This could either be full-size, or made in a split (half) version.  The intended case is a wooden board (or "plinth") that can house the PCB and the metal top plate.  My first concept will likely be based on a bamboo cutting board, but I'll need to do the routing myself to hold the PCB, with an inset for the metal top plate so it sits flush with the upper wood surface.  Also, I'll probably need to cut the board at an angle and re-join it along the center line with one side flipped, so it has a chunky "V" shape.  This should hold the metal top plate but I need to confirm this.  I don't have all the woodworking tools to make this happen, but I know some people who do...
 
-Both cases leave a gap around the RP2040 module.  This can be kept open for visibility, or optionally a cover could be made.  My only cover ideas at this point are either acrylic or solid wood.  The wood cover should have a mini "light-pipe" so the onboard LED can be seen when the cover is installed.  (That way, I can use the LED to indicate which layer is selected.)
+Both cases will leave a gap around the RP2040 module.  This can be kept open for visibility, or optionally a cover could be made.  My only cover ideas at this point are either acrylic or solid wood.  The wood cover should have a mini "light-pipe" so the onboard LED can be seen when the cover is installed.  (That way, I can theoretically use the LED to indicate which layer is selected.)
 
 
 ## Firmware Options
@@ -131,22 +131,22 @@ Both cases leave a gap around the RP2040 module.  This can be kept open for visi
 https://github.com/glebsexy/zmk/tree/rp2040-zero-plus-combos-fix
 https://github.com/tubbytwins/zmk/tree/rp2040-zero-plus-combos-fix
 
-Much credit goes to Glebsexy for doing the heavy lifting of getting the Waveshare RP2040-zero board added to ZMK!  I went ahead and hacked together my own changes *before* I found that this work was already done, so I've moved over to use theirs.
+Much credit goes to Glebsexy for doing the heavy lifting of getting the Waveshare RP2040-zero board added to ZMK!  I went ahead and hacked together my own changes *before* I found that this work was already done, so I've moved over to use their work.
 
 Example ZMK config is here:  https://github.com/tubbytwins/bumwings-zmk-config
 
-*  QMK and KMK are not yet tested, but should work (in theory).  (I haven't tested these yet.)
+*  QMK and KMK are not yet tested, but should work (in theory).
 
 
 ## Wish List and Future Plans
 
-*  Add a Type-C port for expansion (such as a numpad on the left side)
+*  Add a Type-C port for expansion options (such as a numpad on the left side)
    *  Figure out how to get I2C working.
    *  Perhaps use an IO expander instead of a separate MCU?  Not trying to save cost here, but a separate MCU seems to be overkill for the job.
    *  Make it hot-swap capable; if it's plugged in, the RP2040 sees it and uses it; if not, it goes along without it.  My spouse is using an old Microsoft Sidewinder (X4?) keyboard that has a detachable numpad, which is a really good idea and *more keyboards* should support this concept.
    *  Type-C seems nice: I really don't want to use TRS or TRRS connectors for this.  However, it seems that very few companies sell "short" (<18 inch) Type-C cables that are known to work.  Keebio is one of the few companies that does, for the Iris keyboard and others.
 *  Make a Bluetooth (BLE) version; some of the designs listed above use a module that could work nicely.
-   *  Examples:  HolyIOT, Minew, or Wavesare
+   *  Examples:  HolyIOT, Minew, or Waveshare
 *  Make a true split version that could be integrated into a single plinth (or wooden board) with a tenting angle.
 *  Add an optional display: some companies seem to be making 1.4" rectangular LCDs with rounded corners.  It would be nice to have one of these showing layer info and status in real-time while I type.
 *  Make another version that supports the Waveshare RP2040 LCD MCU module, which has a circular LCD screen and looks really cool.

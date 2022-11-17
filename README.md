@@ -7,7 +7,7 @@ BumWings uses an "un-split" angled ergonomic matrix that has columnar stagger wi
 
 The Waveshare RP2040-zero board can either be soldered directly, or socketed pin headers can alternately be used.
 
-Kailh "Choc" PG1350 key switches are used.  The board can either be used bare (not recommended) or installed in a case.  I will soon upload a set of PCB case files for a Corne-style board arrangement (with both top plate and bottom plate).
+This design uses Kailh "Choc" PG1350 key switches.  The board can either be used bare (not recommended) or installed in a case.  I have uploaded a set of PCB case files for a Corne-style board arrangement (with both top plate and bottom plate).  Other case options are still a work in progress.
 
 ![](doc/bumwings_v001_prototype_first_build.jpg)
 
