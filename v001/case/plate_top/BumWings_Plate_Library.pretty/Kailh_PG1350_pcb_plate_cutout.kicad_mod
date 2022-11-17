@@ -1,0 +1,16 @@
+(footprint "Kailh_PG1350_pcb_plate_cutout" (version 20211014) (generator pcbnew)
+  (layer "F.Cu")
+  (tedit 613E3CF9)
+  (property "Sheetfile" "BumWings_001.kicad_sch")
+  (property "Sheetname" "")
+  (attr through_hole)
+  (fp_text reference "SW25" (at 0 8.5) (layer "F.SilkS") hide
+    (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 65bce724-fdca-4638-b9df-957fc3e2490b)
+  )
+  (fp_text value "SW_PUSH" (at 0 9.5) (layer "F.Fab") hide
+    (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 401c04fa-acec-4acf-9f8e-7d240276cf61)
+  )
+  (fp_rect (start 6.92 -6.92) (end -6.92 6.92) (layer "Edge.Cuts") (width 0.12) (fill none) (tstamp 3bdc99e8-e4f6-45e9-9432-0efb0337fb94))
+)
