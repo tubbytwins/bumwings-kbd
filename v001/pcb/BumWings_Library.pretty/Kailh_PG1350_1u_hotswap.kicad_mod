@@ -41,8 +41,10 @@
   (pad "" np_thru_hole circle (at -5.5 0) (size 1.85 1.85) (drill 1.85) (layers F&B.Cu *.Mask) (tstamp c5cf29a8-e1e9-4ae7-9070-c10786347d10))
   (pad "" np_thru_hole circle (at 5.22 -4.2) (size 1.2 1.2) (drill 1.2) (layers *.Cu *.Mask) (tstamp cb5c8023-b2e0-411a-bc43-463f9c775d76))
   (pad "" np_thru_hole circle (at 0 0) (size 3.3 3.3) (drill 3.3) (layers F&B.Cu *.Mask) (tstamp cf452f82-b3c9-487d-bf13-677be23e6b0b))
-  (pad "1" smd rect (at -7.8 3.7 180) (size 1.6 2.2) (layers "B.Cu" "B.Paste" "B.Mask") (tstamp b81be146-b748-4d50-ae57-30df7bda54ac))
-  (pad "2" smd rect (at 2.8 5.9 180) (size 1.6 2.2) (layers "B.Cu" "B.Paste" "B.Mask") (tstamp 98e7f059-6d4c-4d71-85fb-582c0130d673))
+  (pad "1" smd trapezoid (at -9.2 3.7 180) (size 0.6 1.4) (rect_delta 0.8 0) (layers "B.Cu" "B.Paste" "B.Mask") (tstamp 2d8cb049-6bf9-4e8c-83b4-51129ecedd5d))
+  (pad "1" smd rect (at -7.9 3.7 180) (size 2 2.2) (layers "B.Cu" "B.Paste" "B.Mask") (tstamp b81be146-b748-4d50-ae57-30df7bda54ac))
+  (pad "2" smd trapezoid (at 4.2 5.9) (size 0.6 1.4) (rect_delta 0.8 0) (layers "B.Cu" "B.Paste" "B.Mask") (tstamp 249349aa-97d6-4135-80b7-3a789c7f8afd))
+  (pad "2" smd rect (at 2.9 5.9 180) (size 2 2.2) (layers "B.Cu" "B.Paste" "B.Mask") (tstamp 98e7f059-6d4c-4d71-85fb-582c0130d673))
   (model "${KIPRJMOD}/../../lib/dao-choc-ble.3dshapes/PG1350.STEP"
     (offset (xyz 5 -3.7 -1.825))
     (scale (xyz 1 1 1))
