@@ -127,7 +127,8 @@ Both cases will leave a gap around the RP2040 module.  This can be kept open for
 
 ## Firmware Options
 
-*  ZMK works nicely, as long as you have a fork that is based on Pete Johanson's RP2040 support branch.  I recommend using either of these two forks:
+ZMK works nicely, as long as you have a fork that is based on Pete Johanson's RP2040 support branch.  I recommend using either of these two forks:
+
 https://github.com/glebsexy/zmk/tree/rp2040-zero-plus-combos-fix
 https://github.com/tubbytwins/zmk/tree/rp2040-zero-plus-combos-fix
 
@@ -135,7 +136,11 @@ Much credit goes to Glebsexy for doing the heavy lifting of getting the Waveshar
 
 Example ZMK config is here:  https://github.com/tubbytwins/bumwings-zmk-config
 
-*  QMK and KMK are not yet tested, but should work (in theory).
+QMK also works nicely.  I've set up a fork at the link below with the board definition, as well as some sample layouts.
+
+https://github.com/tubbytwins/qmk_firmware_bumwings/tree/add_bumwings
+
+KMK has not yet been tested, but should work (in theory).
 
 
 ## Wish List and Future Plans
