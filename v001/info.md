@@ -46,9 +46,13 @@ I would say that this design of mine is "from scratch" but obviously I have been
 *   Wren (by Walter Hanley; all variants over time)
 *   Zaphod (by Pete Johanson)
 
-One thing to note: I could find no designs that used the Waveshare RP2040-zero module, which was a bit disappointing to me.  So I used this as a vehicle to prove that it could be used in a keyboard design.  There really is a lot to like about this module: it has more IO pins available than the Xiao Seeed RP2040 module, and only takes up less than one square inch of space.  However, this is not a negative statement regarding the Xiao Seeed family, as they look very nice and some others have used them successfully in their own keyboard designs.  At some point I would like to do the same, but IMHO the limited IO pins make it impractical for a single-PCB keyboard with a reasonably useful number of rows and columns, such as this keyboard.  The Waveshare RP2040-zero module addresses these issues handily.
+One thing to note: I could find no designs that used the Waveshare RP2040-zero module, which was a bit disappointing to me.  So I used this as a vehicle to prove that it could be used in a keyboard design.  There really is a lot to like about this module: it has more IO pins available than the Xiao Seeed RP2040 module, and only takes up less than one square inch of space.  The Waveshare RP2040-zero module addresses the limitations of the Xiao Seeed module without extra components.
 
 > FYI - I am not sponsored by Waveshare, nor am I receiving compensation in any way.
+
+UPDATE:  I decided to make a Xiao Seeed variant after all!  The circuit for this variant uses two (2) 74HC595 shift register ICs to drive the column lines, as there are not enough IO pins to drive all the column and row lines.
+
+NOTE:  I am not planning to make a ProMicro compatible variant of this design at this time.
 
 Finally, a brief note about the name ("BumWings").  I'm not really going to give a deep explanation for that: I come up with silly names for things all the time, and most of them are based on meats or other food items (which makes this an exception).  The words "bum" and "wings" happened to pop into my head and the combination made sense to me at the time, and so I kept it.  It isn't meant to be pejorative or insulting.  If you don't like it, feel free to clone the repo, adapt the design to your needs, and change the name to your liking.  This is what open source hardware design allows you to do.
 
@@ -58,9 +62,19 @@ Finally, a brief note about the name ("BumWings").  I'm not really going to give
 https://www.waveshare.com/rp2040-zero.htm
 
 
-## Components
+## Components for Waveshare variant
 
 MCU:     Waveshare RP2040 "zero" (23-pin module with USB-C port) - you can find these on Amazon for a higher price, or on Aliexpress or eBay for a lower price.  They can either be plain, or with pre-soldered pin headers.
+
+## Components for Xiao Seeed variant
+
+MCU:     Xiao Seeed controller of your choice - you can find these from many suppliers
+
+Shift Register:  74HC595PW or SN74HC595PW (in TSSOP-16 format) - you can find these from many suppliers, usually around USD $1.50 for a pack of 10
+
+Reset switch and power switch:  optional, stay tuned...
+
+## Components for all variants
 
 Diodes:  D_SOD-123 (you will need 54 of them)
 
@@ -68,9 +82,12 @@ Sockets:  Kailh Choc hot-swap (again, you will need 54 of them)
 
 Key caps:  MBK (either plain, or with legends, at your discretion)
 
-Although the Waveshare RP2040-zero module does have castellated pins and can theoretically be mounted directly to SMD pads, this design doesn't support that.  I figured that I wasn't ready to try this yet (since my soldering skills are barely passable at best) and also the narrow central neck of the keyboard PCB didn't need to be made any smaller, since the module's RP2040 chip is mounted on the underside.  So my decisions were made based on simplicity.  The module does have 20 IO pins that are accessible via the edge pins, so it is possible to mount this similar to a Pro Micro or Elite-C (i.e., with pin headers) and you wouldn't even need to worry about the remaining 9 IO pins on the underside. 
-
 Other resistors/etc:  none
+
+## Mounting Options
+
+Although both the Waveshare RP2040-zero module and the Xiao Seeed modules do have castellated pins and can theoretically be mounted directly to SMD pads, this design doesn't support that.  I figured that I wasn't ready to try this yet (since my soldering skills are barely passable at best) and also the narrow central neck of the keyboard PCB didn't need to be made any smaller, since the Waveshare module's RP2040 chip is mounted on the underside.  So my decisions were made based on simplicity.  The Waveshare module does have 20 IO pins that are accessible via the edge pins, so it is possible to mount this similar to a Pro Micro or Elite-C (i.e., with pin headers) and you wouldn't even need to worry about the remaining 9 IO pins on the underside.  By contrast, the Xiao Seeed modules do not have extra IO pins on the underside.
+
 
 ## About the Matrix
 
@@ -134,7 +151,7 @@ https://github.com/tubbytwins/zmk/tree/rp2040-zero-plus-combos-fix
 
 Much credit goes to Glebsexy for doing the heavy lifting of getting the Waveshare RP2040-zero board added to ZMK!  I went ahead and hacked together my own changes *before* I found that this work was already done, so I've moved over to use their work.
 
-Example ZMK config is here:  https://github.com/tubbytwins/bumwings-zmk-config
+Example ZMK config is here:  https://github.com/tubbytwins/bumwings-zmk-config  (only supports Waveshare at the moment... stay tuned...)
 
 QMK also works nicely.  I've set up a fork at the link below with the board definition, as well as some sample layouts.
 
