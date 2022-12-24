@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "BumWings_SymLibrary")(type "KiCad")(uri "${KIPRJMOD}/BumWings_SymLibrary.kicad_sym")(options "")(descr ""))
+)
