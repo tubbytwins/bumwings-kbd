@@ -62,28 +62,6 @@ Finally, a brief note about the name ("BumWings").  I'm not really going to give
 https://www.waveshare.com/rp2040-zero.htm
 
 
-## Components for Waveshare variant
-
-MCU:     Waveshare RP2040 "zero" (23-pin module with USB-C port) - you can find these on Amazon for a higher price, or on Aliexpress or eBay for a lower price.  They can either be plain, or with pre-soldered pin headers.
-
-## Components for Xiao Seeed variant
-
-MCU:     Xiao Seeed controller of your choice - you can find these from many suppliers
-
-Shift Register:  74HC595PW or SN74HC595PW (in TSSOP-16 format) - you can find these from many suppliers, usually around USD $1.50 for a pack of 10
-
-Reset switch and power switch:  optional, stay tuned...
-
-## Components for all variants
-
-Diodes:  D_SOD-123 (you will need 54 of them)
-
-Sockets:  Kailh Choc hot-swap (again, you will need 54 of them)
-
-Key caps:  MBK (either plain, or with legends, at your discretion)
-
-Other resistors/etc:  none
-
 ## Mounting Options
 
 Although both the Waveshare RP2040-zero module and the Xiao Seeed modules do have castellated pins and can theoretically be mounted directly to SMD pads, this design doesn't support that.  I figured that I wasn't ready to try this yet (since my soldering skills are barely passable at best) and also the narrow central neck of the keyboard PCB didn't need to be made any smaller, since the Waveshare module's RP2040 chip is mounted on the underside.  So my decisions were made based on simplicity.  The Waveshare module does have 20 IO pins that are accessible via the edge pins, so it is possible to mount this similar to a Pro Micro or Elite-C (i.e., with pin headers) and you wouldn't even need to worry about the remaining 9 IO pins on the underside.  By contrast, the Xiao Seeed modules do not have extra IO pins on the underside.
@@ -167,8 +145,6 @@ KMK has not yet been tested, but should work (in theory).
    *  Perhaps use an IO expander instead of a separate MCU?  Not trying to save cost here, but a separate MCU seems to be overkill for the job.
    *  Make it hot-swap capable; if it's plugged in, the RP2040 sees it and uses it; if not, it goes along without it.  My spouse is using an old Microsoft Sidewinder (X4?) keyboard that has a detachable numpad, which is a really good idea and *more keyboards* should support this concept.
    *  Type-C seems nice: I really don't want to use TRS or TRRS connectors for this.  However, it seems that very few companies sell "short" (<18 inch) Type-C cables that are known to work.  Keebio is one of the few companies that does, for the Iris keyboard and others.
-*  Make a Bluetooth (BLE) version; some of the designs listed above use a module that could work nicely.
-   *  Examples:  HolyIOT, Minew, or Waveshare
 *  Make a true split version that could be integrated into a single plinth (or wooden board) with a tenting angle.
 *  Add an optional display: some companies seem to be making 1.4" rectangular LCDs with rounded corners.  It would be nice to have one of these showing layer info and status in real-time while I type.
 *  Make another version that supports the Waveshare RP2040 LCD MCU module, which has a circular LCD screen and looks really cool.
