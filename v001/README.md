@@ -4,13 +4,39 @@ I used JLCPCB to build the first prototype PCBs for this version.  It works nice
 
 See "info.md" for more information about the background and inspiration for this keyboard design.
 
+
+## List of Variants
+
+*   "pcb_core52840" - 54-key hot-swap PCB based on the Waveshare Core52840 module
+*   "pcb_rp2040zero" - 54-key hot-swap PCB based on Waveshare RP2040 "zero" controller
+*   "pcb_xiao" - 54-key hot-swap PCB based on the Seeed Xiao controller
+*   "pcb_xiao_s" - simplified 54-key direct-soldered PCB based on the Seeed Xiao controller
+
+
+
+## Pictures
+
+The board renders for the Waveshare RP2040-zero variant are shown below:
+
+![](doc/bumwings_v001_board_render.jpg)
+
+The board renders for the Xiao Seeed variant are shown below:
+
+![](doc/bumwings_v001_xiao_board_render.jpg)
+
+The board renders for the slightly simplified Xiao Seeed variant are shown below:
+
+![](doc/bumwings_v001_xiao_s_board_render.jpg)
+
+
+
 ## Bill of Materials
 
 ## All variants
 
-Diodes:  D_SOD-123 (you will need 54 of them)
+Diodes:  54x D_SOD-123
 
-Sockets:  Kailh Choc hot-swap (again, you will need 54 of them)
+Sockets:  54x Kailh Choc hot-swap (for all variants except "pcb_xiao_s") (again, you will need 54 of them)
 
 Key caps:  MBK (either plain, or with legends, at your discretion)
 
@@ -26,9 +52,20 @@ MCU:     Waveshare RP2040 "zero" (23-pin module with USB-C port) - you can find 
 
 MCU:     Xiao Seeed controller of your choice - you can find these from many suppliers
 
-Shift Register:  74HC595PW or SN74HC595PW (in TSSOP-16 format) - you can find these from many suppliers, usually around USD $1.50 for a pack of 10
+Shift Register:  2x 74HC595PW or SN74HC595PW (in TSSOP-16 format) - you can find these from many suppliers, usually around USD $1.50 for a pack of 10
 
 Reset switch and power switch:  optional, stay tuned...
+
+
+### Xiao Seeed Simplified variant
+
+MCU:    Xiao Seeed controller (as above)
+
+Shift Register:  2x 74HC595PW or SN74HC595PW (in TSSOP-16 format)
+
+No reset or power switch.  This variant is intended for non-wireless (and non-battery-powered) builds.  The Xiao Seeed RP2040 controller works very well for this variant, and I expect that the SAMD21 controller would also work very well.
+
+For this variant, all components are direct-soldered to the front of the PCB (except the key switches, obviously).
 
 
 ### Waveshare Core52840 variant
@@ -71,7 +108,7 @@ https://github.com/yumagulovrn/dao-choc-ble
 | U3           | Voltage Regulator IC      | SOT-23-5 | XC6220          | 1    |
 | U4           | Battery Charging IC       | SOT-23-5 | MCP73831        | 1    |
 
-In the Dao-Choc-BLE design, the designer offered an alternate value of 820k for "R5"; however, for such a voltage sensing circuit (for battery status) will give somewhat invalid values.  In my design, I opted to use two resistors that added up to 806k, which is the recommended value.
+In the Dao-Choc-BLE design, the designer offered an alternate value of 820k for "R5"; however, for such a voltage sensing circuit (for battery status) a resistor of 820k will give somewhat invalid values.  In my design, I opted to use two resistors that added up to 806k, which is the recommended value.
 
 **RPROG**** Value depends on your battery capacity. For 300mAh battery should be 3.3K
 

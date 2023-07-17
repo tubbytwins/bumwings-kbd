@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "BumWings_Library")(type "KiCad")(uri "${KIPRJMOD}/BumWings_Library.pretty")(options "")(descr ""))
+)
