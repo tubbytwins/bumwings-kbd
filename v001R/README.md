@@ -35,16 +35,16 @@ I also took the liberty of experimenting with the layout and the number of keys,
 
 The board renders for the 55-key and 64-key Waveshare RP2040-zero variants are shown below:
 
-![](doc/bumwings_v001R55_rp2040zero_board_render.jpg)
+![](../doc/bumwings_v001R55_rp2040zero_board_render.jpg)
 
-![](doc/bumwings_v001R64_rp2040zero_board_render.jpg)
+![](../doc/bumwings_v001R64_rp2040zero_board_render.jpg)
 
 
 The board renders for the 55-key and 64-key Xiao Seeed variants are shown below:
 
-![](doc/bumwings_v001R55_xiao_sd_board_render.jpg)
+![](../doc/bumwings_v001R55_xiao_sd_board_render.jpg)
 
-![](doc/bumwings_v001R64_xiao_sd_board_render.jpg)
+![](../doc/bumwings_v001R64_xiao_sd_board_render.jpg)
 
 
 

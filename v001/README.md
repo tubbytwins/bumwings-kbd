@@ -18,15 +18,15 @@ See "info.md" for more information about the background and inspiration for this
 
 The board renders for the Waveshare RP2040-zero variant are shown below:
 
-![](doc/bumwings_v001_board_render.jpg)
+![](../doc/bumwings_v001_board_render.jpg)
 
 The board renders for the Xiao Seeed variant are shown below:
 
-![](doc/bumwings_v001_xiao_board_render.jpg)
+![](../doc/bumwings_v001_xiao_board_render.jpg)
 
 The board renders for the slightly simplified Xiao Seeed variant are shown below:
 
-![](doc/bumwings_v001_xiao_s_board_render.jpg)
+![](../doc/bumwings_v001_xiao_s_board_render.jpg)
 
 
 
