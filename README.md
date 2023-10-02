@@ -1,5 +1,5 @@
 # Introduction
-BumWings is an ergonomic keyboard design that has two variants:  one that uses the Waveshare RP2040-zero board which features a Raspberry Pi RP2040 MCU, and another that uses the Xiao Seeed family of controllers.   This design is my first attempt at an all-new keyboard PCB design, but obviously it has been influenced by many other keyboard designs (both open-source, closed-source and commercial).
+BumWings is an ergonomic keyboard design that has several variants with different key configurations.  Some variants use the Waveshare RP2040-zero board which features a Raspberry Pi RP2040 MCU.  Other variants use the Xiao Seeed family of controllers.  Additionally, I've created a new variant (64-key) that uses a nice!nano or compatible MCU.  These designs represent my first attempts at an all-new keyboard PCB design, but obviously I have been influenced by many other keyboard designs (including open-source, closed-source and commercial).
 
 ## Design and Implementation
 
@@ -9,15 +9,15 @@ The controller board can either be soldered directly to the PCB, or socketed pin
 
 Credit is given to Pete Johanson for the Xiao footprint, circuit design and other aspects from his [revxlp keyboard design](https://gitlab.com/lpgalaxy/revxlp).
 
-This design uses Kailh "Choc" PG1350 key switches.  The board can either be used bare (not recommended) or installed in a case.  I have uploaded a set of PCB case files for a Corne-style board arrangement (with both top plate and bottom plate).  Other case options are still a work in progress.
+This design uses Kailh "Choc" PG1350 key switches.  The board can either be used bare or installed in a case.  For those who prefer a case, I have uploaded a set of PCB case files for a Corne-style board arrangement (with both top plate and bottom plate).  Other case options are still a work in progress.  I am open to using a 3D-printed case, but currently lack the capability (and I don't have a 3D printer); interested individuals who want to help me develop a 3D-printed case should contact me.
 
 ## Revisions
 
-The original designs (labeled as "v001", committed in December 2022 and January 2023) represent my first attmept to create a keyboard PCB design.  I learned several things, including the undeniable fact that relatively large PCBs are somewhat more expensive. 
+The original designs (labeled as "v001", committed in December 2022 and January 2023) represent my first attmept to create a keyboard PCB design.  I learned several things, including the undeniable fact that relatively large PCBs are somewhat more expensive to produce. 
 
 I also learned that my hand-soldering skills were **not** that great.  
 
-These learnings were applied to the "revised" or "remixed" designs (labeled as "v001R", committed in July 2023) which improve on the original "v001" design.  These are in the "v001R" subdirectory.
+These learnings were applied to the "revised" or "remixed" designs (labeled as "v001R", committed in July 2023) which improve on the original "v001" design in some subtle ways.  These are in the "v001R" subdirectory.  I recommend that new users start with the designs in the "v001R" subdirectory.
 
 ## Pictures - Work in Progress
 
@@ -35,7 +35,10 @@ Here are two pictures of the new "v001R" Xiao variant with 64 keys.  This keyboa
 ![](doc/bumwings_v001R64_xiao_sd_build_keycaps.jpg)
 
 
-
-
 (more pictures coming soon)
+
+## Future Directions
+
+I'd like to work on a split-keyboard version of BumWings.  I was initially not interested in making one, but over time I have realized that it could be useful - if not for myself, then perhaps for others.  It's also evident that there are a great many other split keyboard designs that have enjoyed widespread adoption within the community, so I decided that the core design concepts of BumWings would definitely be applicable to a split keyboard.  Watch this space for updates.
+
 
