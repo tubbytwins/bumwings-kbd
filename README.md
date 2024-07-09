@@ -34,11 +34,20 @@ Here are two pictures of the new "v001R" Xiao variant with 64 keys.  This keyboa
 ![](doc/bumwings_v001R64_xiao_sd_build_wip.jpg)
 ![](doc/bumwings_v001R64_xiao_sd_build_keycaps.jpg)
 
+Here's another board, this one using the excellent Kailh Choc Sunset switches (mostly) with custom keycaps.
+
+![](doc/bumwings_v001R64_xiao_sd_build_keycaps2_spooky.jpg)
+
 
 (more pictures coming soon)
 
 ## Future Directions
 
-I'd like to work on a split-keyboard version of BumWings.  I was initially not interested in making one, but over time I have realized that it could be useful - if not for myself, then perhaps for others.  It's also evident that there are a great many other split keyboard designs that have enjoyed widespread adoption within the community, so I decided that the core design concepts of BumWings would definitely be applicable to a split keyboard.  Watch this space for updates.
+Update 2024/July: I have some new things to show!
+
+![](doc/bumwings_v001R64_nano_keycaps.jpg)
+
+![](doc/bumsplitwings_v001R66_nano_keycaps.jpg)
+
 
 
